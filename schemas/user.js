@@ -1,5 +1,5 @@
 const Joi = require("joi");
-const emailRegexp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+const emailRegexp = /^\w+([\\.-]?\w+)*@\w+([\\.-]?\w+)*(\.\w{2,3})+$/;
 
 const authSchema = Joi.object({
   password: Joi.string().min(6).required().messages({
